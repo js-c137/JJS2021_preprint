@@ -26,14 +26,9 @@ jobs:
       - name: Install TeXlive
         run: sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super
   
-      - name: Build CV
+      - name: Build Paper
         run: make
         
-      - name: Prepare files for gh-pages
-        run: |
-          mkdir -p -v public
-          mv -v cn/manuscript.pdf public/manuscript.pdf
-
   Deploy:
     needs: [build]
     runs-on: ubuntu-latest
