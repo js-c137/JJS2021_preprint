@@ -31,8 +31,8 @@ jobs:
 
       - name: Prepare files for gh-pages
         run: |
-          mkdir public
-          mv manuscript.pdf public/manuscript.pdf
+          mkdir -p -v public
+          mv cn/manuscript.pdf public/manuscript.pdf
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
