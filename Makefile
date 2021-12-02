@@ -1,13 +1,10 @@
 all: cv_en.pdf cv_cn.pdf manuscript.pdf clean
 
 install_tex:
-	curl -sL "https://yihui.org/tinytex/install-bin-unix.sh" | sh
-	tlmgr install anyfontsize ctex datetime enumitem etaremune \
-		everysel fancyhdr fmtcount geometry hyperref sourcesanspro \
-    	sourcecodepro titlesec xcolor
+	sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super
 	
 manuscript.pdf: *.tex
-	latexmk -xelatex manuscript.tex
+	latexmk -pdf -bibtex manuscript.tex
 
 cv_en.pdf: en/*.tex
 	cd en && latexmk -xelatex cv.tex
