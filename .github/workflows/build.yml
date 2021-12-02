@@ -34,11 +34,28 @@ jobs:
           mkdir -p -v public
           mv -v cn/manuscript.pdf public/manuscript.pdf
 #
-      - name: Deploy
+#      - name: Deploy
+#        uses: peaceiris/actions-gh-pages@v3
+#        if: github.event_name == 'push'
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: ./public
+#          force_orphan: true
+
+  deploy:
+    # Edit here if compiling multiple papers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          path: temp
+      - name: move
+        run: mkdir -p public && mv temp/*/* public
+      - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
-        if: github.event_name == 'push'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: build
           force_orphan: true
