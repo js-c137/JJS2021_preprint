@@ -41,6 +41,7 @@ jobs:
 
   deploy:
     # Edit here if compiling multiple papers
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Prepare files for gh-pages
