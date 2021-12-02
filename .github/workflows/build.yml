@@ -32,7 +32,7 @@ jobs:
       - name: Prepare files for gh-pages
         run: |
           mkdir -p -v public
-          mv cn/manuscript.pdf public/manuscript.pdf
+          mv -v cn/*.pdf public/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
