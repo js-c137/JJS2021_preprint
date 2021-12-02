@@ -29,11 +29,11 @@ jobs:
       - name: Build CV
         run: make
 
-      - name: Prepare files for gh-pages
-        run: |
-          mkdir -p -v public
-          mv -v cn/*.pdf public/
-
+#      - name: Prepare files for gh-pages
+#        run: |
+#          mkdir -p -v public
+#          mv -v cn/*.pdf public/
+#
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.event_name == 'push'
