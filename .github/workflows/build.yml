@@ -28,6 +28,12 @@ jobs:
   
       - name: Build CV
         run: make
+        
+      - name: Prepare files for gh-pages
+        run: |
+          mkdir -p -v public
+          mv -v cn/manuscript.pdf public/manuscript.pdf
+        
 
       
 #
@@ -39,16 +45,12 @@ jobs:
 #          publish_dir: ./public
 #          force_orphan: true
 
-  deploy:
+  Deploy:
     # Edit here if compiling multiple papers
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: Prepare files for gh-pages
-        run: |
-          mkdir -p -v public
-          mv -v cn/manuscript.pdf public/manuscript.pdf
-      
+  
       - name: Checkout
         uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
