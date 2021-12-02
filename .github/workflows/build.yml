@@ -29,6 +29,11 @@ jobs:
       - name: Build Paper
         run: make
         
+      - name: Prepare files for gh-pages
+        run: |
+          mkdir -p -v public
+          mv -v cn/manuscript.pdf public/manuscript.pdf
+        
   Deploy:
     needs: [build]
     runs-on: ubuntu-latest
@@ -44,5 +49,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: public
           force_orphan: true
