@@ -22,30 +22,10 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Install TinyTeX
-        run: |
-          curl -sL "https://yihui.org/tinytex/install-bin-unix.sh" | sh
-          echo "${HOME}/bin" >> $GITHUB_PATH
-
-      - name: Install LaTeX packages
-        run: |
-          tlmgr install \
-            anyfontsize \
-            ctex \
-            datetime \
-            enumitem \
-            etaremune \
-            everysel \
-            fancyhdr \
-            fmtcount \
-            geometry \
-            hyperref \
-            sourcesanspro \
-            sourcecodepro \
-            titlesec \
-            xcolor
-
+        
+      - name: Install TeXlive
+        run: sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super
+  
       - name: Build CV
         run: make
 
