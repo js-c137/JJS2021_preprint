@@ -1,49 +1,16 @@
-# TIAN Dongdong (田冬冬)'s Curriculum Vitae
+# Build the Latex version of the manuscript JJS2021
 
-[![Build](https://github.com/seisman/cv/actions/workflows/build.yaml/badge.svg)](https://github.com/seisman/cv/actions/workflows/build.yaml)
+![workflow](https://github.com/js-c137/Test/actions/workflows/main.yml/badge.svg)
+<!---![parameter](https://github.com/js-c137/JJS2021_preprint/actions/workflows/main.yml/badge.svg?branch=feature-1)--->
 
-These are the LaTeX sources for my academic CV.
 
-## Preview
+A GitHub action compiles the paper at every commit. The latest version is made available at this permanent URL
 
-Preview my CV:
+> [https://github.com/js-c137/JJS2021_preprint/blob/build/manuscript.pdf](https://nbviewer.org/github/js-c137/Test/blob/gh-pages/manuscript.pdf)
 
-- [English version](https://github.com/seisman/cv/blob/gh-pages/DTian_cv_en.pdf)
-- [Chinese version (中文版)](https://github.com/seisman/cv/blob/gh-pages/DTian_cv_cn.pdf)
 
-## Build
 
-To build the CV, you need to have LaTeX installed. The full LaTeX distribution
-(e.g., TeXLive on Linux or MacTeX on macOS) are usually too big (>5 GB).
-I recommend to install the lightweight [TinyTeX](https://yihui.org/tinytex/)
-(< 100MB).
+Also, you can build this on your own tex compiler. Download the source files from the repositary
+and build the `manuscript.tex` file on any compatible Latex compailar.
 
-1. 	Install TinyTeX:
-
-		curl -sL "https://yihui.org/tinytex/install-bin-unix.sh" | sh
-
-2. 	Install LaTeX packages needed by the CV template:
-
-        tlmgr install \
-            anyfontsize \
-            ctex \
-            datetime \
-            enumitem \
-            etaremune \
-            everysel \
-            fancyhdr \
-            fmtcount \
-            geometry \
-            hyperref \
-            sourcesanspro \
-            sourcecodepro \
-            titlesec \
-            xcolor
-
-3. 	Build the CV:
-
-		make
-
-## Acknowledgemnt
-
-The CV template is modified from https://github.com/leouieda/cv.
+<a href="https://nbviewer.org/github/js-c137/Test/blob/gh-pages/manuscript.pdf">View PDF</a>
