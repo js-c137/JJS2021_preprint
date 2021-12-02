@@ -1,6 +1,6 @@
 # Build the Latex version of the manuscript JJS2021
 
-![workflow](https://github.com/js-c137/Test/actions/workflows/main.yml/badge.svg)
+![workflow](https://github.com/js-c137/Test/.github/workflows/build.yml/badge.svg)
 <!---![parameter](https://github.com/js-c137/JJS2021_preprint/actions/workflows/main.yml/badge.svg?branch=feature-1)--->
 
 
