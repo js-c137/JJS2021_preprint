@@ -36,7 +36,7 @@ jobs:
         
   Deploy:
     needs: [build]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
   
       - name: Checkout
@@ -44,7 +44,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           path: ./public
-
+    
       - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
         with:
