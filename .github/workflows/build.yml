@@ -31,8 +31,7 @@ jobs:
         run: |
           mkdir -p -v public
           cp -v manuscript/manuscript.pdf public/manuscript.pdf
-          touch gh-pages/.nojekyll
-  
+          
       - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
         with:
