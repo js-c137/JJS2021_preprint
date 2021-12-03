@@ -30,12 +30,15 @@ jobs:
       - name: Prepare files for gh-pages
         run: |
           mkdir -p -v public
-          mv -v manuscript/manuscript.pdf public/manuscript.pdf
+          cp -v manuscript/manuscript.pdf public/manuscript.pdf
+          mkdir output
+          touch output/.nojekyll
+          cp *.pdf output/
   
       - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           keep_files: true
-          publish_dir: ./public/
+          publish_dir: output/
           force_orphan: true
