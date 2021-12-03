@@ -32,7 +32,7 @@ jobs:
       - name: Prepare files for gh-pages
         run: |
           mkdir -p -v public
-          mv -v cn/manuscript.pdf public/manuscript.pdf
+          mv -v manuscript/manuscript.pdf public/manuscript.pdf
         
   Deploy:
     needs: [build]
