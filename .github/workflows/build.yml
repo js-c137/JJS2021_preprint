@@ -49,7 +49,7 @@ jobs:
       - name: Download File
         uses: actions/download-artifact@v1
         with:
-         name: manuscript.pdf
+         name: manuscript/manuscript.pdf
          run: cat manuscript.pdf
           
       - name: deploy on orphan branch
