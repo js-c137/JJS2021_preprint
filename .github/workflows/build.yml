@@ -37,14 +37,7 @@ jobs:
           mkdir -p -v public
           cp -v manuscript/manuscript.pdf public/manuscript.pdf
           cd manuscript
-          ls
-          
-      - name: Upload
-        uses: actions/upload-artifact@v2
-        with:
-         name: PDF
-         path: manuscript/manuscript.pdf
-       
+          ls     
      
       - name: Download File
         uses: actions/download-artifact@v1
