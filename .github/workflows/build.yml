@@ -41,9 +41,9 @@ jobs:
           
       - name: Upload
       - uses: actions/upload-artifact@v2
-         with:
-           name: PDF
-           path: manuscript.pdf
+        with:
+         name: PDF
+         path: manuscript.pdf
           
       - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
