@@ -9,7 +9,7 @@ on:
       - main
   # Schedule monthly builds
   schedule:
-    - cron: '0 0 1 * *'
+    - cron:  '0 0 * * *' # every 24 hours
 
 jobs:
   build:
