@@ -25,13 +25,16 @@ jobs:
         run: sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super
         
       - name: Location
-        run: pwd
+        run: |
+          pwd
+          ls
   
       - name: Build Paper
         run: make
         
       - name: Prepare files for gh-pages
         run: |
+          ls
           mkdir -p -v public
           cp -v manuscript/manuscript.pdf public/manuscript.pdf
           
