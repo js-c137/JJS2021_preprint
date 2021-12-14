@@ -23,6 +23,9 @@ jobs:
         
       - name: Install TeXlive
         run: sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super
+        
+      - name: Location
+        run: pwd
   
       - name: Build Paper
         run: make
