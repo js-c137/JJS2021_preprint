@@ -23,12 +23,7 @@ jobs:
         
       - name: Install TeXlive
         run: sudo apt-get install texlive texlive-publishers texlive-science latexmk cm-super
-        
-      - name: Location
-        run: |
-          pwd
-          ls
-  
+              
       - name: Build Paper
         run: make
         
@@ -36,15 +31,13 @@ jobs:
         run: |
           mkdir -p -v public
           cp -v manuscript/manuscript.pdf public/manuscript.pdf
-          cd manuscript
-          ls     
-     
-      - name: Download File
-        uses: actions/download-artifact@v1
+              
+      - name: Upload
+        uses: actions/upload-artifact@v2
         with:
-         name: manuscript/manuscript.pdf
-         run: cat manuscript.pdf
-          
+         name: PDF
+         path: manuscript/manuscript.pdf
+                   
       - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
         with:
