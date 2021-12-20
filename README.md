@@ -6,7 +6,7 @@
 
 A GitHub action compiles the paper at every commit. The latest version is made available at this permanent URL
 
-> [https://github.com/js-c137/JJS2021_preprint/blob/gh-pages/manuscript.pdf](https://nbviewer.org/github/js-c137/JJS2021_preprint/blob/gh-pages/manuscript.pdf)
+> [https://github.com/js-c137/JJS2021_preprint/blob/gh-pages/manuscript.pdf](https://nbviewer.org/github/js-c137/JJS2021_preprint/blob/gh-pages/manuscript.pdf) 
 
 
 
