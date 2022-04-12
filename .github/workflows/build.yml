@@ -33,7 +33,7 @@ jobs:
           cp -v manuscript/manuscript.pdf public/manuscript.pdf
               
       - name: Upload
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
          name: PDF
          path: manuscript/manuscript.pdf
