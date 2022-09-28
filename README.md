@@ -1,4 +1,4 @@
-# Build the Latex version of the manuscript JJS2021
+# Build the Latex version of the manuscript Savio et al. 2022
 
 ![Build](https://github.com/js-c137/Test/actions/workflows/build.yml/badge.svg) 
 <!---![parameter](https://github.com/js-c137/JJS2021_preprint/actions/workflows/main.yml/badge.svg?branch=feature-1)--->
